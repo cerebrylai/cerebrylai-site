@@ -161,7 +161,7 @@ function HomePage() {
             <div className="absolute inset-[-12%] rounded-full bg-[radial-gradient(circle,rgba(85,232,255,.12),rgba(223,77,255,.08)_45%,transparent_72%)] blur-3xl" />
             <img
               src="/images/Cerebryl.Ai Transparent sm.png"
-              alt="Cerebryl.Ai logo"
+              alt="Cerebryl.AI logo"
               className="relative z-10 h-auto w-[600px] max-w-[95vw] sm:w-[650px] md:w-[620px]"
             />
           </div>
@@ -171,7 +171,7 @@ function HomePage() {
           </h2>
 
           <p className="opensans mt-4 max-w-4xl text-[1.05rem] leading-8 text-white/78 sm:text-[1.48rem]">
-            Cerebryl.Ai develops practical AI capability within individuals and organizations through structured training, applied systems, and real-world implementation.
+            Cerebryl.AI develops practical AI capability within individuals and organizations through structured training, applied systems, and real-world implementation.
           </p>
         </section>
 
