@@ -166,7 +166,7 @@ function HomePage() {
             />
           </div>
 
-          <h2 className="mt-4 text-[1.1rem] font-bold uppercase tracking-[0.05em] text-white sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.78rem]">
+          <h2 className="mt-1 text-[1.1rem] font-bold uppercase tracking-[0.05em] text-white sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.78rem]">
             BUILDING AI SYSTEMS FOR REAL PEOPLE DOING REAL WORK
           </h2>
 
