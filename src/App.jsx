@@ -160,7 +160,7 @@ function HomePage() {
           <div className="relative flex justify-center">
             <div className="absolute inset-[-12%] rounded-full bg-[radial-gradient(circle,rgba(85,232,255,.12),rgba(223,77,255,.08)_45%,transparent_72%)] blur-3xl" />
             <img
-              src="/images/Cerebryl.AI_Transparent_SM.png"
+              src="/images/Cerebryl.Ai Transparent SM.png"
               alt="Cerebryl.AI logo"
               className="relative z-10 h-auto w-[600px] max-w-[95vw] sm:w-[650px] md:w-[620px]"
             />
@@ -175,7 +175,104 @@ function HomePage() {
           </p>
         </section>
 
-        {/* REST OF FILE UNCHANGED */}
+        <section className="mt-14 border-t border-white/10 pt-10 text-center">
+          <h3 className="mb-8 text-[2rem] font-bold uppercase tracking-[0.12em] text-white sm:text-[2.2rem]">
+            WHAT WE OFFER
+          </h3>
+
+          <div className="grid items-stretch gap-6 md:grid-cols-2">
+            {offerings.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className={`group flex h-full flex-col rounded-[26px] border bg-[linear-gradient(180deg,rgba(9,2,34,.62),rgba(10,3,30,.42))] px-7 py-7 backdrop-blur-md transition duration-300 hover:-translate-y-1 ${item.borderClass} ${item.hoverGlowClass}`}
+              >
+                <div className={`mb-4 flex justify-center transition duration-300 group-hover:scale-[1.04] ${item.iconClass}`}>
+                  {item.icon}
+                </div>
+
+                <h4 className={`text-[1.9rem] font-medium tracking-[0.05em] ${item.titleClass}`}>
+                  {item.title}
+                </h4>
+
+                <p className="opensans mx-auto mt-5 max-w-[368px] text-[1.3rem] leading-8 text-white/86">
+                  {item.description}
+                </p>
+
+                <ul className="opensans mx-auto mt-5 max-w-[430px] flex-1 space-y-2 text-left text-[1rem] leading-7 text-white/86">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-3">
+                      <span className={`mt-2 h-2.5 w-2.5 rounded-full ${item.bulletClass}`} />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div
+                  className={`mt-8 w-full rounded-[12px] border border-white/10 bg-gradient-to-r ${item.buttonClass} px-5 py-3.5 text-center text-[1.02rem] font-bold uppercase tracking-[0.06em] text-white shadow-[0_0_18px_rgba(113,216,255,0.18)] transition duration-300 group-hover:scale-[1.01]`}
+                >
+                  {item.cta}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="relative mt-10 rounded-[26px] border border-cyan-300/55 bg-[linear-gradient(180deg,rgba(8,2,35,.58),rgba(10,3,32,.40))] px-6 py-6 shadow-[0_0_22px_rgba(59,223,255,0.10)] backdrop-blur-md sm:px-8">
+          <div className="absolute left-0 top-0 rounded-br-2xl rounded-tl-[24px] border-b border-r border-cyan-300/35 bg-[#10032c]/85 px-4 py-2 text-[0.78rem] uppercase tracking-[0.18em] text-cyan-200/90">
+            COMING SOON
+          </div>
+
+          <div className="grid gap-6 pt-8 md:grid-cols-2 md:items-center max-w-[900px] mx-auto">
+            <div>
+              <h4 className="whitespace-nowrap text-center text-[1.48rem] font-bold uppercase tracking-[0.05em] text-cyan-300 sm:text-[1.85rem] md:text-[2rem]">
+                AI TRAINING COURSE
+              </h4>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 md:items-start">
+                <ul className="opensans space-y-2 text-left text-[0.98rem] leading-7 text-white/86">
+                  <li>• Practical, no-fluff framework</li>
+                  <li>• Built for founders & operators</li>
+                </ul>
+                <p className="opensans text-left text-[1rem] leading-8 text-white/82">
+                  Learn how to build real AI systems that actually work, step-by-step.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-self-center">
+              <div className="flex w-full max-w-[290px] flex-col gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="opensans w-full rounded-[12px] border border-white/12 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-white/38"
+                />
+                <button className="w-full rounded-[12px] border border-white/12 bg-gradient-to-r from-cyan-400 via-[#8f79ff] to-fuchsia-500 px-7 py-3.5 text-[1rem] font-bold uppercase tracking-[0.06em] text-white shadow-[0_0_18px_rgba(113,216,255,0.14)]">
+                  JOIN WAITLIST →
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-10 border-t border-white/12 pt-6">
+          <div className="grid items-start gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+            {trustItems.map((item) => (
+              <div key={item.title} className="flex items-center justify-center gap-3 text-left">
+                <div className={`${item.className} shrink-0 drop-shadow-[0_0_10px_rgba(103,232,249,0.28)]`}>
+                  {item.icon}
+                </div>
+                <div>
+                  <div className="text-[0.95rem] font-bold uppercase tracking-[0.05em] text-white">
+                    <span className={item.title === 'SECURE & TRUSTED' ? 'whitespace-nowrap' : ''}>
+                      {item.title}
+                    </span>
+                  </div>
+                  <div className="opensans mt-0.5 text-[0.84rem] text-white/64">{item.text}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   )
