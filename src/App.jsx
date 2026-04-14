@@ -162,7 +162,7 @@ function HomePage() {
             <img
               src="/images/Cerebryl.Ai Transparent sm.png"
               alt="Cerebryl.AI logo"
-              className="relative z-10 h-auto w-[600px] max-w-[95vw] sm:w-[650px] md:w-[620px]"
+              className="relative z-10 h-auto w-[750px] max-w-[95vw] sm:w-[650px] md:w-[800px]"
             />
           </div>
 
