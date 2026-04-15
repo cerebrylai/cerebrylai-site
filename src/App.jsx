@@ -5,12 +5,12 @@ import PromptPacksPage from './PromptPacksPage'
 function HomePage() {
   const offerings = [
     {
-      title: 'PROMPT PACKS',
+      title: 'AI SYSTEMS',
       href: '/prompt-packs',
       icon: (
         <img
           src="/images/Prompt icon.png"
-          alt="Prompt Packs icon"
+          alt="AI Systems icon"
           className="h-16 w-16 object-contain"
         />
       ),
@@ -18,16 +18,16 @@ function HomePage() {
       iconClass: 'text-cyan-300',
       borderClass: 'border-cyan-400/85 shadow-[0_0_24px_rgba(68,221,255,0.18)]',
       hoverGlowClass:
-        'hover:border-cyan-300 hover:shadow-[0_0_38px_rgba(68,221,255,0.28)]',
-      description: 'Professionally engineered AI prompt systems ready to use.',
+        'group-hover:border-cyan-200 group-hover:shadow-[0_0_60px_rgba(68,221,255,0.42)]',
+      description: 'Structured, step-by-step AI systems designed for real-world tasks.',
       bullets: [
-        'Save hours of trial and error',
-        'Optimized for high-quality output',
-        'Instant download & easy to use',
+        'Ready-to-use workflows',
+        'Built from structured prompts',
+        'Designed for immediate execution',
       ],
       bulletClass: 'bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)]',
       buttonClass: 'from-cyan-400 via-[#7a82ff] to-fuchsia-400',
-      cta: 'BUY NOW →',
+      cta: 'EXPLORE SYSTEMS →',
     },
     {
       title: 'AI CONSULTING',
@@ -56,7 +56,7 @@ function HomePage() {
       iconClass: 'text-fuchsia-300',
       borderClass: 'border-fuchsia-400/85 shadow-[0_0_24px_rgba(232,121,249,0.18)]',
       hoverGlowClass:
-        'hover:border-fuchsia-300 hover:shadow-[0_0_38px_rgba(232,121,249,0.28)]',
+        'group-hover:border-fuchsia-200 group-hover:shadow-[0_0_60px_rgba(232,121,249,0.42)]',
       description: 'Custom AI systems to streamline your workflow and scale your business.',
       bullets: [
         'Personalized AI system setup',
@@ -160,13 +160,13 @@ function HomePage() {
           <div className="relative flex justify-center">
             <div className="absolute inset-[-12%] rounded-full bg-[radial-gradient(circle,rgba(85,232,255,.12),rgba(223,77,255,.08)_45%,transparent_72%)] blur-3xl" />
             <img
-              src="/images/Cerebryl.Ai Transparent SM.png"
+              src="/images/Cerebryl.Ai_Transparent_SM.png"
               alt="Cerebryl.AI logo"
-              className="relative z-10 h-auto w-[600px] max-w-[95vw] sm:w-[650px] md:w-[620px]"
+              className="relative z-10 h-auto w-[750px] max-w-[95vw] sm:w-[650px] md:w-[800px] -mt-14 -mb-8"
             />
           </div>
 
-          <h2 className="mt-4 text-[1.1rem] font-bold uppercase tracking-[0.05em] text-white sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.78rem]">
+          <h2 className="mt-0 text-[1.1rem] font-bold uppercase tracking-[0.05em] text-white sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.78rem]">
             BUILDING AI SYSTEMS FOR REAL PEOPLE DOING REAL WORK
           </h2>
 
@@ -175,7 +175,7 @@ function HomePage() {
           </p>
         </section>
 
-        <section className="mt-14 border-t border-white/10 pt-10 text-center">
+        <section className="mt-8 border-t border-white/10 pt-10 text-center">
           <h3 className="mb-8 text-[2rem] font-bold uppercase tracking-[0.12em] text-white sm:text-[2.2rem]">
             WHAT WE OFFER
           </h3>
@@ -185,68 +185,79 @@ function HomePage() {
               <Link
                 key={item.title}
                 to={item.href}
-                className={`group flex h-full flex-col rounded-[26px] border bg-[linear-gradient(180deg,rgba(9,2,34,.62),rgba(10,3,30,.42))] px-7 py-7 backdrop-blur-md transition duration-300 hover:-translate-y-1 ${item.borderClass} ${item.hoverGlowClass}`}
+                className="group block h-full"
               >
-                <div className={`mb-4 flex justify-center transition duration-300 group-hover:scale-[1.04] ${item.iconClass}`}>
-                  {item.icon}
-                </div>
-
-                <h4 className={`text-[1.9rem] font-medium tracking-[0.05em] ${item.titleClass}`}>
-                  {item.title}
-                </h4>
-
-                <p className="opensans mx-auto mt-5 max-w-[368px] text-[1.3rem] leading-8 text-white/86">
-                  {item.description}
-                </p>
-
-                <ul className="opensans mx-auto mt-5 max-w-[430px] flex-1 space-y-2 text-left text-[1rem] leading-7 text-white/86">
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-3">
-                      <span className={`mt-2 h-2.5 w-2.5 rounded-full ${item.bulletClass}`} />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-
                 <div
-                  className={`mt-8 w-full rounded-[12px] border border-white/10 bg-gradient-to-r ${item.buttonClass} px-5 py-3.5 text-center text-[1.02rem] font-bold uppercase tracking-[0.06em] text-white shadow-[0_0_18px_rgba(113,216,255,0.18)] transition duration-300 group-hover:scale-[1.01]`}
+                  className={`flex h-full flex-col rounded-[26px] border-2 bg-[linear-gradient(180deg,rgba(9,2,34,.46),rgba(10,3,30,.28))] px-7 py-7 backdrop-blur-md transform-gpu transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] ${item.borderClass} ${item.hoverGlowClass}`}
                 >
-                  {item.cta}
+                  <div className={`mb-4 flex justify-center transition duration-300 group-hover:scale-[1.04] ${item.iconClass}`}>
+                    {item.icon}
+                  </div>
+
+                  <h4 className={`text-[1.9rem] font-medium tracking-[0.05em] ${item.titleClass}`}>
+                    {item.title}
+                  </h4>
+
+                  <p className="opensans mx-auto mt-5 max-w-[368px] text-[1.3rem] leading-8 text-white/86">
+                    {item.description}
+                  </p>
+
+                  <ul className="opensans mx-auto mt-5 max-w-[430px] flex-1 space-y-2 text-left text-[1rem] leading-7 text-white/86">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-3">
+                        <span className={`mt-2 h-2.5 w-2.5 rounded-full ${item.bulletClass}`} />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div
+                    className={`mt-8 w-full rounded-[12px] border border-white/10 bg-gradient-to-r ${item.buttonClass} px-5 py-3.5 text-center text-[1.02rem] font-bold uppercase tracking-[0.06em] text-white shadow-[0_0_18px_rgba(113,216,255,0.18)] transition duration-300 group-hover:scale-[1.01]`}
+                  >
+                    {item.cta}
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
         </section>
 
-        <section className="relative mt-10 rounded-[26px] border border-cyan-300/55 bg-[linear-gradient(180deg,rgba(8,2,35,.58),rgba(10,3,32,.40))] px-6 py-6 shadow-[0_0_22px_rgba(59,223,255,0.10)] backdrop-blur-md sm:px-8">
-          <div className="absolute left-0 top-0 rounded-br-2xl rounded-tl-[24px] border-b border-r border-cyan-300/35 bg-[#10032c]/85 px-4 py-2 text-[0.78rem] uppercase tracking-[0.18em] text-cyan-200/90">
+        <section className="group relative mt-10 rounded-[26px] border-2 border-cyan-300/70 bg-[linear-gradient(180deg,rgba(8,2,35,.46),rgba(10,3,32,.28))] px-6 py-6 shadow-[0_0_22px_rgba(59,223,255,0.10)] backdrop-blur-md transform-gpu transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:shadow-[0_0_60px_rgba(59,223,255,0.36)] sm:px-8">
+          <div className="absolute left-0 top-0 rounded-br-[18px] rounded-tl-[24px] border-b-2 border-r-2 border-cyan-300/70 bg-[linear-gradient(180deg,rgba(20,14,58,.42),rgba(10,6,34,.26))] px-5 py-2 text-[0.8rem] uppercase tracking-[0.18em] text-cyan-200 backdrop-blur-sm">
             COMING SOON
           </div>
 
-          <div className="grid gap-6 pt-8 md:grid-cols-2 md:items-center max-w-[900px] mx-auto">
+          <div className="mx-auto grid max-w-[1220px] gap-8 pt-8 md:grid-cols-[1.05fr_1.20fr_2.00fr] md:items-start">
             <div>
-              <h4 className="whitespace-nowrap text-center text-[1.48rem] font-bold uppercase tracking-[0.05em] text-cyan-300 sm:text-[1.85rem] md:text-[2rem]">
+              <h4 className="whitespace-nowrap text-center md:text-left md:translate-x-35 text-[1.6rem] font-bold uppercase tracking-[0.05em] text-cyan-300 sm:text-[1.95rem] md:text-[2rem]">
                 AI TRAINING COURSE
               </h4>
-              <div className="mt-6 grid gap-6 md:grid-cols-2 md:items-start">
-                <ul className="opensans space-y-2 text-left text-[0.98rem] leading-7 text-white/86">
-                  <li>• Practical, no-fluff framework</li>
-                  <li>• Built for founders & operators</li>
-                </ul>
-                <p className="opensans text-left text-[1rem] leading-8 text-white/82">
-                  Learn how to build real AI systems that actually work, step-by-step.
-                </p>
-              </div>
+
+              <ul className="opensans mt-6 space-y-3 text-left text-[0.98rem] leading-7 text-white/86 md:pl-16">
+                <li className="flex items-center gap-3">
+                  <span className="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)]" />
+                  <span>Practical, no-fluff framework</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)]" />
+                  <span>Built for founders & operators</span>
+                </li>
+              </ul>
             </div>
 
-            <div className="flex items-center justify-center md:justify-self-center">
-              <div className="flex w-full max-w-[290px] flex-col gap-4">
+            <div className="opensans max-w-[400px] text-left text-[1rem] leading-8 text-white/82 md:-ml-20 md:pt-[66px]">
+              Learn how to build real AI systems that actually work, step-by-step.
+            </div>
+
+            <div className="flex items-start justify-end md:pt-[36px]">
+              <div className="flex w-full max-w-[620px] flex-col gap-4">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="opensans w-full rounded-[12px] border border-white/12 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-white/38"
+                    className="w-full rounded-[12px] border border-white/15 bg-white/10 backdrop-blur-sm px-6 py-4 text-white placeholder-white/60 outline-none"
+
                 />
-                <button className="w-full rounded-[12px] border border-white/12 bg-gradient-to-r from-cyan-400 via-[#8f79ff] to-fuchsia-500 px-7 py-3.5 text-[1rem] font-bold uppercase tracking-[0.06em] text-white shadow-[0_0_18px_rgba(113,216,255,0.14)]">
+                <button className="w-full rounded-[12px] border border-white/12 bg-gradient-to-r from-cyan-400 via-[#8f79ff] to-fuchsia-500 px-7 py-4 text-[1rem] font-bold uppercase tracking-[0.06em] text-white shadow-[0_0_18px_rgba(113,216,255,0.14)]">
                   JOIN WAITLIST →
                 </button>
               </div>
